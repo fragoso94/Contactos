@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Contactos</string>
+    <string name="nombre">Josè Daniel</string>
+    <string name="telefono">9612674521</string>
+    <string name="correo">ing.fragoso94@gmail.com</string>
+</resources>
