@@ -50,7 +50,7 @@
             android:layout_marginLeft="10dp"
             android:gravity="center"
             android:text="@string/correo"
-            android:textSize="@dimen/correo"/>
+            android:textSize="@dimen/"/>
     </LinearLayout>
 
 
