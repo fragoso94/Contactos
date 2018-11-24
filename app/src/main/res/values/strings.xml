@@ -3,4 +3,7 @@
     <string name="nombre">Josè Daniel</string>
     <string name="telefono">9612674521</string>
     <string name="correo">ing.fragoso94@gmail.com</string>
+    <string name="pnombre">Nombre</string>
+    <string name="ptelefono">Telefono</string>
+    <string name="pcorreo">Email</string>
 </resources>

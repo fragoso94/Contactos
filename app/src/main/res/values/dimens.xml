@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="nombre_contacto">30dp</dimen>
+    <dimen name="phone_text">20dp</dimen>
     <dimen name="correo">20dp</dimen>
 </resources>
