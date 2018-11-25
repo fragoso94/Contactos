@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 intentItem.putExtra(getResources().getString(R.string.ptelefono),contactos.get(position).getTelefono());
                 intentItem.putExtra(getResources().getString(R.string.pcorreo   ),contactos.get(position).getEmail());
                 startActivity(intentItem);
+                finish();
             }
         });
     }
