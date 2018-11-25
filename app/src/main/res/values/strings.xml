@@ -6,4 +6,5 @@
     <string name="pnombre">Nombre</string>
     <string name="ptelefono">Telefono</string>
     <string name="pcorreo">Email</string>
+    <string name="TextoDenegado">Se ha denegado el permiso.</string>
 </resources>
