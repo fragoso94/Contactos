@@ -4,8 +4,10 @@ public class Contacto {
     private String nombre;
     private String telefono;
     private String email;
+    private int foto;
 
-    public Contacto(String nombre, String telefono, String email) {
+    public Contacto(int foto, String nombre, String telefono, String email) {
+        this.foto = foto;
         this.nombre = nombre;
         this.telefono = telefono;
         this.email = email;
@@ -33,5 +35,13 @@ public class Contacto {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getFoto() {
+        return foto;
+    }
+
+    public void setFoto(int foto) {
+        this.foto = foto;
     }
 }
