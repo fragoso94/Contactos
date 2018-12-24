@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,6 +39,12 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
         contactoViewHolder.cvFoto.setImageResource(contacto.getFoto());
         contactoViewHolder.cvNombre.setText(contacto.getNombre());
         contactoViewHolder.cvTelefono.setText(contacto.getTelefono());
+        contactoViewHolder.btnLike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(activity,"Diste Like a "+contacto.getNombre(),Toast.LENGTH_SHORT).show();
+            }
+        });
         contactoViewHolder.cvFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,12 +76,16 @@ public class ContactoAdaptador extends RecyclerView.Adapter<ContactoAdaptador.Co
         private ImageView cvFoto;
         private TextView cvNombre;
         private TextView cvTelefono;
+        private ImageButton btnLike;
         public ContactoViewHolder(@NonNull View itemView) {
             super(itemView);
             cvFoto = itemView.findViewById(R.id.cv_foto);
             cvNombre = itemView.findViewById(R.id.cv_Nombre);
             cvTelefono = itemView.findViewById(R.id.cv_telefono);
+            btnLike = itemView.findViewById(R.id.btnLike);
         }
     }
+
+
 
 }
