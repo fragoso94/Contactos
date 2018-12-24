@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void inicializarAdaptador(){
-        ContactoAdaptador adaptador = new ContactoAdaptador(contactos);
+        ContactoAdaptador adaptador = new ContactoAdaptador(contactos, this);
         listaContactos.setAdapter(adaptador);
     }
 }
