@@ -7,4 +7,7 @@
     <string name="ptelefono">Telefono</string>
     <string name="pcorreo">Email</string>
     <string name="TextoDenegado">Se ha denegado el permiso.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
