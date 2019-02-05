@@ -61,11 +61,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void inicializarListaContacto(){
         contactos = new ArrayList<>(); //lista de contactos
-        contactos.add(new Contacto(R.drawable.uno, "Daniel", "9612674521", "ing.fragoso94@gmail.com"));
+        /*contactos.add(new Contacto(R.drawable.uno, "Daniel", "9612674521", "ing.fragoso94@gmail.com"));
         contactos.add(new Contacto(R.drawable.dos, "Miranda Keyes", "9612675005", "keyes94@gmail.com"));
         contactos.add(new Contacto(R.drawable.tres, "Ronald", "9612677001", "ronald4@gmail.com"));
         contactos.add(new Contacto(R.drawable.cuatro, "Alba", "9612675009", "alba@gmail.com"));
-        contactos.add(new Contacto(R.drawable.cinco, "Maria", "9612675005", "maria@gmail.com"));
+        contactos.add(new Contacto(R.drawable.cinco, "Maria", "9612675005", "maria@gmail.com"));*/
     }
 
     public void inicializarAdaptador(){
