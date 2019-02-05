@@ -1,4 +1,4 @@
-package com.example.bacha.contactos;
+package com.example.bacha.contactos.pojo;
 
 public class Contacto {
     private String nombre;

@@ -1,16 +1,14 @@
 package com.example.bacha.contactos;
 
-import android.content.Intent;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toolbar;
+import android.support.v7.widget.Toolbar;
+
+import com.example.bacha.contactos.adapter.ContactoAdaptador;
+import com.example.bacha.contactos.pojo.Contacto;
 
 import java.util.ArrayList;
 
@@ -19,30 +17,37 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Contacto> contactos;
     private RecyclerView listaContactos;
     //ListView listaContacto;
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        toolbar = findViewById(R.id.tool_bar);
+        tabLayout = findViewById(R.id.tabLayout);
+        viewPager = findViewById(R.id.viewPager);
         /*Toolbar miActionBar = (Toolbar)findViewById(R.id.miActionBar);
         setSupportActionBar(miActionBar);*/
-        listaContactos = findViewById(R.id.recyclerContactos);
-        //definimos la forma de mostrar mi RecyclerView
 
-        GridLayoutManager glm = new GridLayoutManager(this,2);
-        //LinearLayoutManager llm = new LinearLayoutManager(this);
-        //llm.setOrientation(LinearLayoutManager.VERTICAL);
-        listaContactos.setLayoutManager(glm);//llm - glm
+        /*listaContactos = findViewById(R.id.recyclerContactos); //referencia a recyclerview
+        //definimos la forma de mostrar mi RecyclerView
+        //GridLayoutManager glm = new GridLayoutManager(this,2);
+        LinearLayoutManager llm = new LinearLayoutManager(this);
+        llm.setOrientation(LinearLayoutManager.VERTICAL);
+        listaContactos.setLayoutManager(llm);//llm - glm
         inicializarListaContacto();
-        inicializarAdaptador();
+        inicializarAdaptador();*/
         //inicializamos el Adaptador
+        if (toolbar != null){
+            setSupportActionBar(toolbar);
+        }
 
 
         /*ArrayList<String> nombreContacto = new ArrayList<>();
         for (Contacto contacto : contactos) {
             nombreContacto.add(contacto.getNombre());
         }
-
         listaContacto = (ListView)findViewById(R.id.lv_contacto);
         listaContacto.setAdapter(new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,nombreContacto));
         listaContacto.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -58,9 +63,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
     }
-
     public void inicializarListaContacto(){
         contactos = new ArrayList<>(); //lista de contactos
+        for(int i=0; i<=19; i++){
+            String cad = String.valueOf(i);
+            contactos.add(new Contacto(R.drawable.icon_contacto, "Daniel Frasoso "+cad, "9612674521","ing.fragoso94@gmail.com"));
+        }
         /*contactos.add(new Contacto(R.drawable.uno, "Daniel", "9612674521", "ing.fragoso94@gmail.com"));
         contactos.add(new Contacto(R.drawable.dos, "Miranda Keyes", "9612675005", "keyes94@gmail.com"));
         contactos.add(new Contacto(R.drawable.tres, "Ronald", "9612677001", "ronald4@gmail.com"));

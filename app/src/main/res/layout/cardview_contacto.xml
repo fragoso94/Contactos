@@ -25,7 +25,7 @@
             android:id="@+id/cv_foto"
             android:layout_width="400dp"
             android:layout_height="200dp"
-            android:src="@drawable/cinco"
+            android:src="@drawable/icon_contacto"
             android:scaleType="centerCrop"
             android:layout_gravity="center_horizontal"/>
         <LinearLayout

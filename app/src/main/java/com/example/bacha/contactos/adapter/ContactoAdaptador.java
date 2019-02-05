@@ -1,4 +1,4 @@
-package com.example.bacha.contactos;
+package com.example.bacha.contactos.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +11,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.bacha.contactos.pojo.Contacto;
+import com.example.bacha.contactos.DetalleContacto;
+import com.example.bacha.contactos.R;
 
 import java.util.ArrayList;
 
