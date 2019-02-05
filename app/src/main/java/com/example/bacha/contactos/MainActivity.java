@@ -5,14 +5,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
-import com.example.bacha.contactos.adapter.ContactoAdaptador;
 import com.example.bacha.contactos.adapter.PageAdapter;
 import com.example.bacha.contactos.fragments.Perfil;
 import com.example.bacha.contactos.fragments.RecyclerViewFragment;
-import com.example.bacha.contactos.pojo.Contacto;
 
 import java.util.ArrayList;
 
@@ -66,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
     private void setUpViewPager(){
         viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), agregarFragments()));
         tabLayout.setupWithViewPager(viewPager);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_contacts);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_perfil);
     }
 
 }
