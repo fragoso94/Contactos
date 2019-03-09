@@ -7,8 +7,10 @@ import android.net.Uri;
 import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
@@ -34,7 +36,18 @@ public class DetalleContacto extends AppCompatActivity {
         tvNombre.setText(nombre);
         tvTelefono.setText(telefono);
         tvEmail.setText(correo);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        try {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+        catch (Exception e){
+            e.getMessage();
+        }
+
     }
+
 
     public void llamar(View view) {
         String telefono = tvTelefono.getText().toString();
